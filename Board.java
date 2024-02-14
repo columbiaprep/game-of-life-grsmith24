@@ -38,7 +38,10 @@ public class Board {
   //counts the number of neighbors who are alive, returns the result as an integer
 	//counts all eighth neighboring spaces
   public int countLiveNeighbors(int i, int j) {
-    
+    int counter=0;
+    if(i>=1&&j>=1&&i<board.length&&j<board[0].length){
+
+    }
     return 0;
   }
 
