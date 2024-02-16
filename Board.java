@@ -39,45 +39,27 @@ public class Board {
 	//counts all eighth neighboring spaces
   public int countLiveNeighbors(int i, int j) {
     int counter=0;
-    if(i==0){
-      if(j==0){
-
-      }
-      else if(j==board[0].length-1){
-
-      }
-      else{
-
+    for(int r= i-1; r<=i+1; r++){
+      for(int c= j-1; c<=j+1; c++){
+        if((r!=i || c!=j) && r>=0 && c>=0 && r< board.length && c< board[0].length && board[r][c].getIsAlive()){
+          counter++;
+        }
       }
     }
-    else if(i== board.length-1){
-      if(j==0){
-
-      }
-      else if(j==board[0].length-1){
-
-      }
-      else{
-
-      }
-    }
-    else {
-      if(j==0){
-
-      }
-      else if(j==board[0].length-1){
-
-      }
-      else{
-        if()
-      }
-    }
-    return 0;
+    return counter;
   }
 
   public void createNewGeneration() {
     //creates a blank board of same size called newGenBoard
-    Cell[][] nextGenBoard = new Cell[board.length][board[0].length]; 
+    Cell[][] nextGenBoard = new Cell[board.length][board[0].length];
+    for(int r= 0; r < board.length; r++){
+      for(int c= 0; c<board[0].length; c++){
+        if(countLiveNeighbors(r,c)==2 || countLiveNeighbors(r,c)==3){
+
+        }
+
+      }
+    }
     //all changes should be reflected only on nextGenBoard, and we copy them over on the last line of the method
 
 	//for each space in the nextGenBoard:
