@@ -55,7 +55,7 @@ public class Board {
     for(int r= 0; r < board.length; r++){
       for(int c= 0; c<board[0].length; c++){
         if(countLiveNeighbors(r,c)==2 || countLiveNeighbors(r,c)==3){
-
+          nextGenBoard[r][c].setIsAlive(true);
         }
 
       }
